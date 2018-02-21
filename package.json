@@ -6,9 +6,10 @@
   "scripts": {
     "test": "npm-run-all test:*",
     "test:html": "nu-html-checker *.html",
+    "test:js": "jshint js/*.js",
     "init-project": "npm install && npm-run-all init:*",
     "init:dirs": "mkdir -p sass css vendor images js",
-    "init:files": "touch README.md index.html sass/style.scss js/script.js",
+    "init:files": "touch README.md index.html sass/style.scss js/scripts.js",
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "build": "npm-run-all build:* test",
     "build:clean": "rimraf -rf css/*",
@@ -31,6 +32,7 @@
     "npm-run-all": "^4.1.2",
     "nu-html-checker": "^0.1.0",
     "onchange": "^3.3.0",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "jshint": "^2.9.5"
   }
 }
